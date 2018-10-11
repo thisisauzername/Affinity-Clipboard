@@ -20,7 +20,7 @@ text = input("Paste your text here: \n")
 
 @app.route('/your-text')
 def display():
-    return (text)
+    return render_template("web.html")
 
 if __name__=='__main__':
     app.run(host=str(IP_Address), port=3134)
