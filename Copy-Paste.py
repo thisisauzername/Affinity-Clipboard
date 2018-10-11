@@ -16,8 +16,6 @@ def get_ip():
 
 IP_Address = get_ip()
 
-print(IP_Address)
-
 text = input("Paste your text here: \n")
 
 @app.route('/')
