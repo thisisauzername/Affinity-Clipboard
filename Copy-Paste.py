@@ -18,7 +18,7 @@ IP_Address = get_ip()
 
 text = input("Paste your text here: \n")
 
-@app.route('/')
+@app.route('/your-text')
 def display():
     return (text)
 
