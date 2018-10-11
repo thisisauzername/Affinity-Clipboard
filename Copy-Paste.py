@@ -18,8 +18,8 @@ IP_Address = get_ip()
 
 text = input("Paste your text here: \n")
 
-@app.route('/your-text')
-def display():
+@app.route('/')
+def webpage():
     return render_template("web.html")
 
 if __name__=='__main__':
