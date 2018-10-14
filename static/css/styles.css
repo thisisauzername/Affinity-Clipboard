@@ -48,24 +48,19 @@ a {
     font-family: sans-serif;
     vertical-align: bottom;
     color: #C7D6D5;
-    margin: 46%;
+    display: table;
+    margin: 0 auto;
+    padding-top: 300px;
 }
 
 button {
     width: 100px; height: 50px;
     font-size: 15px;
+    font-weight: bold;
+    color: #363946;
     border-radius: 10px;
     border-width: 0px;
-    background-color: #F4F9E9;
-    left: 50%;
-    right: 50%;
-}
-
-.wrapper {
-    text-align: center;
-}
-
-.button {
-    position: absolute;
-    top: 50%;
+    background-color: #C7D6D5;
+    display: table;
+    margin: 0 auto;
 }
