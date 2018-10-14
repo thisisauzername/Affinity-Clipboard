@@ -13,9 +13,18 @@
     <h2>Here's your text!</h2>
     <h1></h1>
     <p class="wordWrap" id="text">{{text}}</p>
-    <a href="https://github.com/thisisauzername/OnlineCopyPaste" target="_blank">GitHub</a>
 
-    <script src="{{url_for('static', filename='js/functions.js')}}"></script>
+    <!-- Target -->
+    <input id="foo" value={{text}}>
+
+    <button class="btn" data-clipboard-target="#foo">Copy Text</button>
+
+    <a href="https://github.com/thisisauzername/OnlineCopyPaste" target="_blank">GitHub</a>
   </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+  <script type="text/javascript">
+    new ClipboardJS('.btn');
+  </script>
 
 </html>
