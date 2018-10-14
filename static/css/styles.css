@@ -1,23 +1,23 @@
 body {
-  background-color: #6D7275;
+    background-color: #6D7275;
+    align-items: center;
 }
 
 h1 {
-  text-align: center;
-  font-family: sans-serif;
-  font-size: 70px;
-  color: #C20114;
-  border-bottom: solid;
-  border-radius: 10px;
-  margin-left: 450px;
-  margin-right: 450px;
+    font-family: sans-serif;
+    font-size: 70px;
+    color: #C20114;
+    border-bottom: solid;
+    border-radius: 10px;
+    margin-left: 450px;
+    margin-right: 450px;
 }
 
 h2 {
-  text-align: center;
-  font-family: sans-serif;
-  font-size: 40px;
-  color: #D8DAD3;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 40px;
+    color: #D8DAD3;
 }
 
 .wordWrap {
@@ -27,36 +27,45 @@ h2 {
 }
 
 p {
-  text-align: left;
-  vertical-align: middle;
-  margin-left: 100px;
-  margin-right: 100px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  padding: 25px;
-  font-family: sans-serif;
-  font-size: 25px;
-  color: #C7D6D5;
-  background-color: #363946;
-  border-width: 0px;
-  border-style: solid;
-  border-radius: 12px;
-  overflow: auto;
+    text-align: left;
+    vertical-align: middle;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 25px;
+    font-family: sans-serif;
+    font-size: 25px;
+    color: #C7D6D5;
+    background-color: #363946;
+    border-width: 0px;
+    border-style: solid;
+    border-radius: 12px;
+    overflow: auto;
 }
 
 a {
-  font-family: sans-serif;
-  text-align: center;
-  vertical-align: bottom;
-  color: #C7D6D5;
-  margin: 46%;
+    font-family: sans-serif;
+    vertical-align: bottom;
+    color: #C7D6D5;
+    margin: 46%;
 }
 
 button {
-  text-align: center;
-  width: 100px; height: 50px;
-  font-size: 15px;
-  border-radius: 10px;
-  border-width: 0px;
-  margin: 0 auto;
+    width: 100px; height: 50px;
+    font-size: 15px;
+    border-radius: 10px;
+    border-width: 0px;
+    background-color: #F4F9E9;
+    left: 50%;
+    right: 50%;
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.button {
+    position: absolute;
+    top: 50%;
 }

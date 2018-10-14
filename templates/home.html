@@ -4,27 +4,27 @@
 
 <html>
 
-  <head>
-    <title>Online Copy Paste</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    </head>
+    <head>
+        <title>Online Copy Paste</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        </head>
 
-  <body>
-    <h2>Here's your text!</h2>
-    <h1></h1>
-    <p class="wordWrap" id="text">{{text}}</p>
+    <body>
+        <h2>Here's your text!</h2>
+        <h1></h1>
+        <p class="wordWrap" id="text">{{text}}</p>
 
-    <!-- Target -->
-    <input id="foo" value={{text}}>
+        <!-- Target -->
+        <input type="hidden" id="foo" value={{text}}>
 
-    <button class="btn" data-clipboard-target="#foo">Copy Text</button>
+        <button class="btn" data-clipboard-target="#foo">Copy Text</button>
 
-    <a href="https://github.com/thisisauzername/OnlineCopyPaste" target="_blank">GitHub</a>
-  </body>
+        <a href="https://github.com/thisisauzername/OnlineCopyPaste" target="_blank">GitHub</a>
+    </body>
 
-  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
-  <script type="text/javascript">
-    new ClipboardJS('.btn');
-  </script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+    <script type="text/javascript">
+      new ClipboardJS('.btn');
+    </script>
 
 </html>
