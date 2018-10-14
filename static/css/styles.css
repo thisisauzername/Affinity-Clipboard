@@ -1,12 +1,12 @@
 body {
-  background-color: lightgray;
+  background-color: #6D7275;
 }
 
 h1 {
   text-align: center;
   font-family: sans-serif;
   font-size: 70px;
-  color: blueviolet;
+  color: #C20114;
   border-bottom: solid;
   border-radius: 10px;
   margin-left: 450px;
@@ -17,7 +17,7 @@ h2 {
   text-align: center;
   font-family: sans-serif;
   font-size: 40px;
-  color: mediumseagreen;
+  color: #D8DAD3;
 }
 
 .wordWrap {
@@ -36,9 +36,9 @@ p {
   padding: 25px;
   font-family: sans-serif;
   font-size: 25px;
-  color: lightgray;
-  background-color: tomato;
-  border-width: thin;
+  color: #C7D6D5;
+  background-color: #363946;
+  border-width: 0px;
   border-style: solid;
   border-radius: 12px;
   overflow: auto;
@@ -47,6 +47,6 @@ p {
 a {
   text-align: center;
   vertical-align: bottom;
-  color: blue;
-  margin: 50%;
+  color: #C7D6D5;
+  margin: 46%;
 }
