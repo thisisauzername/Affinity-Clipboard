@@ -11,10 +11,10 @@ master.title("Affinity Clipboard")
 master.geometry("500x500")
 master.resizable(0, 0)
 
+# Function for getting the user's IP Address to use as the site address
 def get_ip():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     try:
-        # doesn't even have to be reachable
         s.connect(('10.255.255.255', 1))
         IP = s.getsockname()[0]
     except:
@@ -25,6 +25,7 @@ def get_ip():
 
 IP_Address = get_ip()
 
+# All the widgets of the GUI
 scrollbar = Scrollbar(master)
 scrollbar.pack(side=RIGHT, fill=Y)
 
@@ -45,6 +46,9 @@ port = random.randint(1000, 9999)
 link = Label(master, text="Your text is available at: http://" + IP_Address + ":" + str(port) + "/", width=100, height=3)
 link.pack()
 
+# temp = input("")
+
+# Running the web app
 @app.route('/')
 def webpage():
     return render_template("home.html", text=str(input), IP_Address=get_ip())
