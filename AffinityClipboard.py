@@ -25,7 +25,7 @@ def get_ip():
 
 IP_Address = get_ip()
 
-# All the widgets of the GUI
+# All the widgets and stuff of the GUI
 scrollbar = Scrollbar(master)
 scrollbar.pack(side=RIGHT, fill=Y)
 
@@ -41,12 +41,14 @@ def retrieve_input():
 b = Button(master, text="OK", command=retrieve_input, width=5, height=2)
 b.pack()
 
+# The port is randomized so the program can be run on multiple devices
+# at the same time on the same IP
 port = random.randint(1000, 9999)
 
-link = Label(master, text="Your text is available at: http://" + IP_Address + ":" + str(port) + "/", width=100, height=3)
+link = Label(master, text="Your text will be available at: http://" + IP_Address + ":" + str(port) + "/", width=100, height=3)
 link.pack()
 
-# temp = input("")
+temp = input("")
 
 # Running the web app
 @app.route('/')
