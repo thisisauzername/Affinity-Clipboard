@@ -21,15 +21,12 @@ IP_Address = get_ip()
 # at the same time on the same IP
 port = random.randint(1000, 9999)
 
-link = Label(master, text="Your text will be available at: http://" + IP_Address + ":" + str(port) + "/", width=100, height=3)
-link.pack()
-
-input = input("")
+text = input("\nPaste your text here: \n")
 
 # Running the web app
 @app.route('/')
 def webpage():
-    return render_template("home.html", text=str(input), IP_Address=get_ip())
+    return render_template("home.html", text=str(text), IP_Address=get_ip())
 
 if __name__=='__main__':
     app.run(host=str(IP_Address), port=int(port))
