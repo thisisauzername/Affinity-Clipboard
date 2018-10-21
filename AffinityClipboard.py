@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 import socket
 import random
+import PySimpleGUI as sg
 app = Flask(__name__)
 
 # Function for getting the user's IP Address to use as the site address
@@ -21,12 +22,31 @@ IP_Address = get_ip()
 # at the same time on the same IP
 port = random.randint(1000, 9999)
 
-text = input("\nPaste your text here: \n")
+link = ("http://" + IP_Address + ":" + str(port))
 
-# Running the web app
+layout = [
+    [sg.Text("Paste your text here:", font=('Sans Serif', 18), text_color='black', justification='center',
+             background_color='white', relief=sg.RELIEF_RAISED)],
+    [sg.Multiline(size=(50, 10), auto_size_text=True, background_color='white', text_color='black')],
+    [sg.Text("Your text will be available at: %s" % link, font=('Sans Serif', 13))],
+    [sg.ReadButton('OK', size=(4, 1), font=('Monospaced', 18), tooltip='Submit Text'), sg.ReadButton('Close', size=(5, 1), font=('Monospaced', 18), tooltip='Close Window')]
+]
+
+window = sg.Window('PySimpleGUI Learning', background_color='white',
+                   auto_size_buttons=True, resizable=True, grab_anywhere=True).Layout(layout)
+
 @app.route('/')
 def webpage():
     return render_template("home.html", text=str(text), IP_Address=get_ip())
 
-if __name__=='__main__':
-    app.run(host=str(IP_Address), port=int(port))
+while True:
+    (event, value) = window.Read()
+    if event == 'OK':
+        text = value
+        # Running the web app
+        if __name__=='__main__':
+            app.run(host=str(IP_Address), port=int(port))
+        print('OK clicked')
+    elif event == 'Close':
+        print('Close clicked')
+        break
